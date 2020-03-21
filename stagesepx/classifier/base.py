@@ -261,7 +261,7 @@ class ClassifierResult(object):
         assert os.path.isfile(from_file), f"file {from_file} not existed"
         with open(from_file, encoding=constants.CHARSET) as f:
             content = json.load(f)
-        return ClassifierResult([SingleClassifierResult(**each) for each in content])
+        return content
 
 
 class BaseClassifier(object):
